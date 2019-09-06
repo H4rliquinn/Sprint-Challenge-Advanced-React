@@ -13,7 +13,7 @@ it('renders without crashing', () => {
 
 test('Page Elements Showing',()=>{
   const pageRender = render(<App />);
-  pageRender.getByText(/hw/i);
+  pageRender.getByText(/world cup/i);
   pageRender.getByText(/dark mode/i);
 })
 

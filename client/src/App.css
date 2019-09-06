@@ -6,3 +6,21 @@
   color: #fff;
   background-color: #313843;
 }
+
+.cardList{
+  display:flex;
+  flex-wrap:wrap;
+  width:100%;
+  justify-content: space-between
+}
+.card{
+  border:1px solid black;
+  margin:10px;
+  width:400px;
+  box-shadow: 3px 3px 4px;
+}
+
+.chart .recharts-wrapper{
+  width:100%;
+  margin:10px auto;
+}

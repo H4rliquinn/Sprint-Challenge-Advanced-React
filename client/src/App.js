@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import axios from 'axios';
 import CardList from './components/CardList.js';
+import Chart from './components/Chart.js';
 
 class App extends   Component{
   constructor(){
@@ -25,7 +26,8 @@ class App extends   Component{
   render(){
     return (
     <div className="App">
-      <h1>hw</h1>
+      <h1>Women's World Cup Players</h1>
+      <Chart data={this.state.data}/>
       <CardList data={this.state.data}/>
     </div>
     );
