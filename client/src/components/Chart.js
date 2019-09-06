@@ -1,7 +1,21 @@
 import React from 'react';
-import { LineChart, Line, CartesianGrid, XAxis, YAxis  } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis,Tooltip   } from 'recharts';
 
 const Chart = (props) => {
+
+    function CustomTooltip({ payload, label, active }) {
+        // console.log(payload);
+        if (active) {
+          return (
+            <div className="custom-tooltip">
+              <p className="label">{`${label} : ${payload[0].value}`}</p>
+            </div>
+          );
+        }
+      
+        return null;
+      }
+
     return ( 
         <div className="chart">
             <h1>Chart</h1>
@@ -10,7 +24,7 @@ const Chart = (props) => {
                 <CartesianGrid stroke="#ccc" />
                 <XAxis />
                 <YAxis />
-
+                <Tooltip content={CustomTooltip} />
             </LineChart>
         </div>
      );
